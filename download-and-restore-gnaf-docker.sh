@@ -2,7 +2,7 @@
 
 sudo docker volume create gnaf_data
 
-sudo docker run --name=gnaf_postgis -p 5433:5432 -v gnaf_data:/var/lib/postgresql  kartoza/postgis:9.6-2.4
+sudo docker run --name=gnaf_postgis -p 5433:5432 -v gnaf_data:/var/lib/postgresql  kartoza/postgis
 
 sudo docker exec gnaf_postgis /bin/sh -c 'touch .pgpass'
 sudo docker exec gnaf_postgis /bin/sh -c 'echo "localhost:5432:gis:docker:docker" >> .pgpass'
