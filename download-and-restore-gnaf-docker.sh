@@ -19,7 +19,7 @@ fi
 
 
 docker volume create gnaf_data
-docker run -it -d --name=gnaf_postgis -p 5433:5432 -v gnaf_data:/var/lib/postgresql  kartoza/postgis
+docker run -it -d --name=gnaf_postgis -p 5433:5432 -v gnaf_data:/var/lib/postgresql  kartoza/postgis:11.0-2.5
 
 docker cp gnaf-201905.dmp gnaf_postgis:/gnaf-201905.dmp
 
